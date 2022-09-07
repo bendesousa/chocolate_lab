@@ -16,4 +16,9 @@ public class EstateService {
     public List<Estate> getAllEstates(){
         return estateRepository.findAll();
     }
+
+    public Estate saveEstate(Estate estate){
+        estateRepository.save(estate);
+        return estate;
+    }
 }

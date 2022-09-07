@@ -16,18 +16,15 @@ public class ChocolateService {
     
     @Autowired
     EstateService estateService;
-    
-//    public Chocolate addNewChocolate(Integer estateId) {
-//        Estate estate = estateService.getEstateById(estateId).get();
-//        Chocolate chocolate = new Chocolate("Galaxy", 44, estate);
-//        
-//    }
 
     public List<Chocolate> getAllChocolates() {
         return chocolateRepository.findAll();
     }
     
-    
+    public Chocolate saveChocolate(Chocolate chocolate){
+        chocolateRepository.save(chocolate);
+        return chocolate;
+    }
     
     
 }
